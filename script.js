@@ -18,8 +18,30 @@ function getComputerChoice () {
         break;
 
         default :
-        return "The Computer is currently unable to choos from the arsenal"
+        return "The Computer is currently unable to choose from the arsenal"
     }
 }
 
-console.log(getComputerChoice())
+//console.log(getComputerChoice())
+
+function getHumanChoice () {
+    let humanChoice = prompt("Please choose one of the following items from the arsenal: 1) Rock, 2) Paper, 3) Scissors .");
+
+    
+
+    if(humanChoice === ''){
+        console.log('Please choose an item from the arsenal.')
+        return null;
+    } 
+    
+    humanChoice = humanChoice.toLowerCase();
+    
+    if (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors") {
+        return `Your choice: ${humanChoice}`;
+    } else {
+        console.log("The item you chose is currently unavailable in this game. Please choose another one.");
+        return null;
+    }
+}
+
+console.log(getHumanChoice())
