@@ -1,5 +1,3 @@
-let computerScore = 0;
-let humanScore = 0;
 
 function getComputerChoice () {
     let result;
@@ -47,8 +45,8 @@ function getHumanChoice () {
 
 //console.log(getHumanChoice())
 
-const humanChoice = getHumanChoice();
-const computerChoice = getComputerChoice();
+let computerScore = 0;
+let humanScore = 0;
 
 function playRound (humanChoice, computerChoice) {
 
@@ -80,12 +78,44 @@ function playRound (humanChoice, computerChoice) {
             console.log('Looks like we have to forget this round');
             break;
     }
+};
 
-    console.log(`Your choice:${humanChoice}`);
-    console.log(`The Computer's choice:${computerChoice}`);
-    console.log(`Your score is:${humanScore}`);
-    console.log(`The Computer's score:${computerScore}`);
+
+
+
+
+//playRound(humanChoice, computerChoice);
+
+function playGame () {
+
+    const numberOfRounds = 5;
+    console.log("Welcome to the game!")
+ 
+
+    for(let i = 1 ; i <= numberOfRounds ; i++) {
+        
+        const humanChoice = getHumanChoice();
+        const computerChoice = getComputerChoice();
+
+        console.log(`<///-----THIS IS THE ROUND NUMBER ${i}-----///>`)
+
+        playRound(humanChoice, computerChoice);
+
+        console.log(`Your choice:${humanChoice}`);
+        console.log(`The Computer's choice:${computerChoice}`);
+
+        console.log(`Your current score is : ${humanScore}`);
+        console.log(`Computer's score: ${computerScore}`);
+    }
+
+    if(humanScore > computerScore) {
+        console.log("<///----- Congratulations, you won the game! -----///>")
+    }  else if (humanScore < computerScore ){
+        console.log("<///----- You lost the game. Better luck next time! -----///>")
+    } else {
+        console.log("<///----- It's a draw! Well played. -----///>")
+    }
 
 };
 
-playRound(humanChoice, computerChoice);
+playGame();
