@@ -1,3 +1,5 @@
+//This file contains the first logic of the game, before adding the UI
+
 
 function getComputerChoice () {
     let result;
@@ -118,4 +120,3 @@ function playGame () {
 
 };
 
-playGame();

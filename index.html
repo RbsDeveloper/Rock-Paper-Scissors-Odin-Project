@@ -3,10 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
     <title>Rock Paper Scissors Game</title>
 </head>
 <body>
 
-    <script src="script.js"></script>
+    <div class="game-container">
+
+        <div class="score-container">
+            <p>Computer : <span id="computerScore">0</span></p>
+            <p>You : <span id="yourScore">0</span></p>
+        </div>
+
+        <div class="hands-container">
+            <button class="btn rock" id="rock"><i class="fa-regular fa-hand-back-fist"></i></button>
+            <button class="btn paper" id="paper"><i class="fa-regular fa-hand"></i></button>
+            <button class="btn scissors" id="scissors"><i class="fa-regular fa-hand-scissors"></i></button>
+        </div>
+
+        <div class="choices-container">
+            <p>You Choose <span id="yourChoice"></span></p>
+            <p>Computer Choose <span id="computerChoice"></span></p>
+        </div>
+
+        <div class="result" id="result">
+            <p>Hmm...<i class="fa-solid fa-gears"></i></p>
+        </div>
+
+    </div>
+
+    <script src="uiScript.js"></script>
 </body>
 </html>

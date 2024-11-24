@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+  background-image: linear-gradient(
+    110deg,
+    hsl(48deg 98% 50%) 0%,
+    hsl(47deg 97% 50%) 8%,
+    hsl(45deg 98% 51%) 17%,
+    hsl(44deg 98% 52%) 25%,
+    hsl(43deg 98% 52%) 33%,
+    hsl(41deg 98% 53%) 42%,
+    hsl(40deg 98% 54%) 50%,
+    hsl(38deg 98% 54%) 58%,
+    hsl(37deg 98% 55%) 67%,
+    hsl(35deg 98% 55%) 75%,
+    hsl(34deg 97% 56%) 83%,
+    hsl(32deg 96% 56%) 92%,
+    hsl(31deg 96% 56%) 100%
+  );
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+.game-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  max-width: 800px;
+  border-radius: 18px;
+  padding: 32px;
+}
+
+.score-container {
+  width: 100%;
+  text-align: right;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.hands-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px 0;
+}
+
+.choices-container {
+  font-size: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  line-height: 32px
+}
+
+.result {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 9px;
+  font-size: 24px;
+  padding: 12px 36px;
+  background-color: #FBCA03;
+  color: #FFF;
+}
+
+span {
+  font-weight: 600;
+}
+
+.btn {
+  background-color: #FBCA03;
+  border-radius: 50%;
+  border: none;
+  width: 150px;
+  height: 150px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s ease;
+}
+
+.btn i {
+  font-size: 100px;
+  color: #fff;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.scissors i {
+  rotate: 90deg;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:hover i{
+  color: black;
+  transform: rotate(45deg);
+}
+
+.btn:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.win {
+  background-color: lightgreen;
+  color: green;
+}
+
+.loose {
+  background-color: lightpink;
+  color: red;
+}
